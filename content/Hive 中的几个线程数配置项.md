@@ -8,4 +8,6 @@
 - hive.server2.webui.max.threads 
 - hive.spark.client.rpc.threads
 
+---
+[Configuration Properties - Apache Hive - Apache Software Foundation](https://cwiki.apache.org/confluence/display/Hive/Configuration+Properties#ConfigurationProperties-HiveConfigurationProperties)
 

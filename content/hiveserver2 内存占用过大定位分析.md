@@ -41,3 +41,5 @@
     1.  客户使用 dbeaver 工具连接 hive,可能没有正确关闭连接,发生了内存泄漏,导致该 list 内的元素不停的堆积.  
     2.  客户查询的这个表有非常多的小文件,导致 hive 做 split 的时候保存了所有小文件的 split 的. 这种可能性比较大.
 
+---
+[Linux 中分析超大 JVM dump 文件 - 简书 (jianshu.com)](https://www.jianshu.com/p/b3ed962b382c)

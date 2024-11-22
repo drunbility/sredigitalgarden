@@ -40,7 +40,7 @@ CombineHiveInputFormat 的 getSplits 方法最终实现在 `org.apache.hadoop.ma
 ---
 [Hive中如何确定map数-阿里云开发者社区 (aliyun.com)](https://developer.aliyun.com/article/26262#slide-4)
 [Hadoop深入学习：InputFormat组件 - 飞翔的荷兰人 - ITeye博客](https://www.iteye.com/blog/flyingdutchman-1876400)
-[浅析Hive/Spark SQL读文件时的输入任务划分_Apache Spark中国社区的博客-CSDN博客](https://blog.csdn.net/weixin_45906054/article/details/104489560)
+[浅析Hive/Spark SQL读文件时的输入任务划分-阿里云开发者社区 (aliyun.com)](https://developer.aliyun.com/article/746037)
 
 
 

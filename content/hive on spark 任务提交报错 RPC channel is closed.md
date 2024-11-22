@@ -26,7 +26,7 @@ hive on spark 任务提交侧报错
 
 那这个task name 去 hs2 日志中搜,发现了这个 task name 实际上是  app name
 
-`2023-02-09T11:40:28,271  INFO [HiveServer2-Background-Pool: Thread-46869] spark.HiveSparkClientFactory: load spark property from hive configuration (spark.app.name -> baiyuxin01#zuoye#f_bbe380f0d29211ec8d0ca17d86bde24a#20230208.6).`
+`2023-02-09T11:40:28,271  INFO [HiveServer2-Background-Pool: Thread-46869] spark.HiveSparkClientFactory: load spark property from hive configuration (spark.app.name -> xxxxxin01#xxxye#f_bbe380f0d29211ec8d0ca17d86bde24a#20230208.6).`
 
 这个 app name 应该是直接发送给了 yarn rm 的,于是在 yarn 的 rm 日志搜索这个 app name ,最终找到这个任务的 application id ,接着去 yarn ui 上找这个 application id ,最终找到任务报错原因:
 由于内存设置不够,导致 application master 无法启动,导致 hs2 中抛出了  `RPC channel is closed` 异常
@@ -34,5 +34,5 @@ hive on spark 任务提交侧报错
 
 #### 总结
 
-hive on spark 任务 hs2 中 driver 提交任务 spark submit 失败没有取到 app id, 这个时候要去关联 yarn 上的信息,可以通过 app name 去关联
+hive on spark 任务 hs2 中 driver 提交任务 spark submit 失败没有取到 app id 的情况, 这个时候要去关联 yarn 上的信息,可以通过 hs2 Taskname 去关联到 spark.app.name
 
